@@ -1,0 +1,72 @@
+const mongoose =require("mongoose");
+const userSchema = new mongoose.Schema({
+    firstname:{
+        type:String,
+        required:true,
+    },
+    Middlename:{
+        type:String,
+        required:false,
+    },
+    Lastname:{
+        type:String,
+        required:false
+    },
+    Mobile:{
+        type:Number,
+        required:true,
+        unique:true
+    },
+    Email:{
+        type:String,
+        required:false,
+        unique:false
+    },
+    Dateofbirth:{
+        type:Number,
+        required:false,
+    },
+    Age:{
+        type:Number,
+        required:false,
+    },
+    Gender:{
+         type:String,
+         requred:false,
+    },
+    College:{
+        type:String,
+        required:false,
+    },
+    Rollnumber:{
+        type:String,
+        required:false
+    },
+    Branch:{
+        type:String,
+        required:false
+    },
+    Section:{
+        type:Number,
+        required:false,
+    },
+    Fathername:{
+        type:String,
+        required:false,
+    },
+    Mothername:{
+        type:String,
+        required:false,
+    },
+    username:{
+        type:String,
+        required:false,
+    },
+    pass:{
+        type:String,
+        required:false,
+    },
+
+
+})
+module.exports=mongoose.model('userData',userSchema);
